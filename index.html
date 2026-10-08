@@ -3,100 +3,432 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio — Motasim</title>
+  <title>Curriculum Vitae — Mohammad Motasim Bin Nazir</title>
+  <meta name="description" content="Dynamic CV of Mohammad Motasim Bin Nazir — B.Sc. in Electronic and Telecommunication Engineering, EMBA Candidate, Data Artist, and IT Specialist." />
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- ───── Cursor Glow ───── -->
+  <!-- ───── Toast Notification ───── -->
+  <div class="toast" id="toast" role="status" aria-live="polite">Copied to clipboard!</div>
+
+  <!-- ───── Cursor Glow (desktop) ───── -->
   <div class="cursor-glow" id="cursorGlow"></div>
 
-  <!-- ───── Navigation ───── -->
-  <nav class="navbar" id="navbar">
-    <a href="#" class="nav-logo">MM<span class="accent">.</span></a>
+  <!-- ───── Top Utility Bar / Quick Actions ───── -->
+  <header class="navbar" id="navbar">
+    <a href="#home" class="nav-logo">
+      <span class="logo-mark">MN</span>
+      <span class="logo-text">Motasim<span class="accent">.cv</span></span>
+    </a>
+
     <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
+      <li><a href="#home">Summary</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#training">Training</a></li>
+      <li><a href="#references">References</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+
+    <div class="nav-actions">
+      <a href="CV of Motasim.pdf" download="CV_of_Mohammad_Motasim.pdf" class="btn btn-sm btn-primary" title="Download Official PDF CV">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        <span>Download PDF</span>
+      </a>
+    </div>
+
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
-  </nav>
+  </header>
 
-  <!-- ───── Hero ───── -->
+  <!-- ───── Hero / CV Header ───── -->
   <section class="hero" id="home">
     <div class="hero-bg-shapes">
       <div class="shape shape-1"></div>
       <div class="shape shape-2"></div>
       <div class="shape shape-3"></div>
     </div>
+
     <div class="hero-content">
-      <p class="hero-greeting anim-reveal">Hello, I'm</p>
-      <h1 class="hero-name anim-reveal" data-delay="1">Mohammad Motasim</h1>
+      <div class="hero-badge anim-reveal">
+        <span class="badge-dot"></span> Curriculum Vitae
+      </div>
+
+      <!-- Professional Profile Photo -->
+      <div class="hero-photo-wrapper anim-reveal" data-delay="0">
+        <div class="hero-photo-container">
+          <div class="hero-photo-border">
+            <img src="Motasim-Pic2.jpg" alt="Mohammad Motasim Bin Nazir" class="hero-photo" />
+          </div>
+          <div class="hero-photo-status" title="Available for Technical & Corporate Roles">
+            <span class="status-dot"></span>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="hero-name anim-reveal" data-delay="1">
+        Mohammad Motasim Bin Nazir
+      </h1>
+
       <div class="hero-title-wrapper anim-reveal" data-delay="2">
-        <span class="hero-title-static">A&nbsp;</span>
+        <span class="hero-title-static">Specialized in&nbsp;</span>
         <span class="hero-title-dynamic" id="typedText"></span>
         <span class="typed-cursor">|</span>
       </div>
-      <p class="hero-desc anim-reveal" data-delay="3">
-        I craft pixel-perfect, accessible &amp; performant digital experiences that live at the intersection of design and engineering.
+
+      <!-- Quick Contact Pills -->
+      <div class="quick-contact-bar anim-reveal" data-delay="3">
+        <button class="contact-pill copy-btn" data-copy="+8801517998512" title="Click to copy phone number">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span class="pill-text">+88 01 517998512</span>
+          <span class="pill-action">Copy</span>
+        </button>
+
+        <button class="contact-pill copy-btn" data-copy="motasim.official@gmail.com" title="Click to copy email address">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 4-10 8L2 4"></path></svg>
+          <span class="pill-text">motasim.official@gmail.com</span>
+          <span class="pill-action">Copy</span>
+        </button>
+
+        <div class="contact-pill" title="Location">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span class="pill-text">Bakalia, Chattogram, Bangladesh</span>
+        </div>
+      </div>
+
+      <p class="hero-desc anim-reveal" data-delay="4">
+        Engineering graduate (B.Sc. in ETE) and E.MBA candidate with proven hands-on experience in data transformation, electronics, telecommunications infrastructure, and corporate operations.
       </p>
-      <div class="hero-cta anim-reveal" data-delay="4">
-        <a href="#projects" class="btn btn-primary">View My Work</a>
+
+      <div class="hero-cta anim-reveal" data-delay="5">
+        <a href="CV of Motasim.pdf" download="CV_of_Mohammad_Motasim.pdf" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          <span>Download Official CV (.PDF)</span>
+        </a>
+        <a href="#experience" class="btn btn-outline">Explore Experience &amp; Skills</a>
         <a href="#contact" class="btn btn-outline">Get in Touch</a>
       </div>
+
       <div class="hero-scroll-hint anim-reveal" data-delay="5">
         <div class="scroll-mouse">
           <div class="scroll-wheel"></div>
         </div>
-        <span>Scroll down</span>
+        <span>Scroll to review CV</span>
       </div>
     </div>
   </section>
 
-  <!-- ───── About ───── -->
-  <section class="section" id="about">
+  <!-- ───── Career Objective & Profile Overview ───── -->
+  <section class="section section-alt" id="about">
     <div class="container">
       <h2 class="section-heading anim-reveal">
-        <span class="heading-number">01.</span> About Me
+        <span class="heading-number">01.</span> Career Objective &amp; Bio
       </h2>
-      <div class="about-grid">
-        <div class="about-image anim-reveal-left">
-          <div class="about-img-wrapper">
-            <div class="about-img-placeholder">
-              <svg viewBox="0 0 200 200" fill="none"><circle cx="100" cy="80" r="40" stroke="currentColor" stroke-width="2"/><path d="M40 180c0-33 27-60 60-60s60 27 60 60" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </div>
-            <div class="about-img-border"></div>
+
+      <div class="objective-card anim-reveal-up">
+        <div class="objective-header">
+          <div class="quote-badge">“</div>
+          <div>
+            <span class="objective-tag">Executive Summary</span>
+            <h3>Career Objective</h3>
           </div>
         </div>
-        <div class="about-text anim-reveal-right">
-          <p>
-            I'm a passionate <strong>Full-Stack Developer</strong> and <strong>UI/UX Designer</strong> with 5+ years of experience building products that people love.
-          </p>
-          <p>
-            My journey began when I built my first website at 15 — a terrible GeoCities page that ignited a lifelong obsession with the web. Since then, I've had the privilege of working with startups, agencies, and large enterprises.
-          </p>
-          <p>
-            When I'm not coding, you'll find me hiking mountain trails, experimenting with pour-over coffee, or contributing to open-source projects.
-          </p>
-          <div class="about-stats">
-            <div class="stat anim-counter" data-target="50">
-              <span class="stat-number">0</span>+
-              <span class="stat-label">Projects</span>
+        <p class="objective-quote">
+          Hardworking and self-learner with a motivated attitude and a variety of up-to-date skills. Adept in various social media platforms and office technology programs. Committed to contributing my expertise in a dynamic office environment related to Electronics, Telecommunications and IT field.
+        </p>
+      </div>
+
+      <!-- Quick Metrics Grid -->
+      <div class="metrics-grid">
+        <div class="metric-card anim-reveal-up" data-delay="0">
+          <div class="metric-icon">📈</div>
+          <div class="metric-content">
+            <span class="metric-title">EMBA Candidate</span>
+            <span class="metric-sub">University of Chittagong (Ongoing)</span>
+          </div>
+        </div>
+
+        <div class="metric-card anim-reveal-up" data-delay="1">
+          <div class="metric-icon">🎓</div>
+          <div class="metric-content">
+            <span class="metric-title">B.Sc. Engineering</span>
+            <span class="metric-sub">Electronic & Telecommunication Engineering (IIUC)</span>
+          </div>
+        </div>
+
+        <div class="metric-card anim-reveal-up" data-delay="2">
+          <div class="metric-icon">📚</div>
+          <div class="metric-content">
+            <span class="metric-title">HSC (Science)</span>
+            <span class="metric-sub">Hazera Taju Degree College</span>
+          </div>
+        </div>
+
+        <div class="metric-card anim-reveal-up" data-delay="3">
+          <div class="metric-icon">🏫</div>
+          <div class="metric-content">
+            <span class="metric-title">SSC (Science)</span>
+            <span class="metric-sub">Chittagong Ideal High School</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Personal Info Grid -->
+      <div class="personal-info-container anim-reveal-up">
+        <h3 class="subsection-title">Personal Information</h3>
+        <div class="personal-info-grid">
+          <div class="info-item">
+            <span class="info-label">Full Name</span>
+            <span class="info-value">Mohammad Motasim Bin Nazir</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Father's Name</span>
+            <span class="info-value">Nazir Ahmed Jahedy <small>(Senior Executive Officer, ROC Agrabad, UCB PLC)</small></span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Mother's Name</span>
+            <span class="info-value">Sabera Begum <small>(Housewife)</small></span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Date of Birth</span>
+            <span class="info-value">11th March, 2000</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Religion</span>
+            <span class="info-value">Islam</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Marital Status</span>
+            <span class="info-value">Single</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Present Address</span>
+            <span class="info-value">BAB - E - Idris, Mousumi Mor, 17 - West Bakalia, Chattogram</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Permanent Address</span>
+            <span class="info-value">Mandal Para, Sabrang, Teknaf, Cox's Bazar</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── Experience & Professional History ───── -->
+  <section class="section" id="experience">
+    <div class="container">
+      <h2 class="section-heading anim-reveal">
+        <span class="heading-number">02.</span> Professional Experience
+      </h2>
+
+      <div class="experience-showcase">
+        <!-- Main Role: Data Artist -->
+        <div class="job-card featured-job anim-reveal-up">
+          <div class="job-header">
+            <div class="job-role-info">
+              <div class="job-badge">Recent Employment</div>
+              <h3 class="job-title">Data Artist <span class="job-level">(Associate)</span></h3>
+              <h4 class="company-name">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"></path><path d="M3 7v14"></path><path d="M21 7v14"></path><path d="M9 3h6v4H9z"></path></svg>
+                Catalyst Solutions — Chattogram Branch
+              </h4>
             </div>
-            <div class="stat anim-counter" data-target="30">
-              <span class="stat-number">0</span>+
-              <span class="stat-label">Clients</span>
+            <div class="job-meta">
+              <span class="job-date">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                November 2025 — April 2026
+              </span>
+              <span class="job-location">Chattogram, Bangladesh</span>
             </div>
-            <div class="stat anim-counter" data-target="5">
-              <span class="stat-number">0</span>+
-              <span class="stat-label">Years Exp.</span>
+          </div>
+
+          <div class="job-body">
+            <p class="job-summary">
+              Specialized in converting raw corporate data into high-impact, decision-ready visual assets and executive presentations for enterprise stakeholders.
+            </p>
+
+            <h5 class="responsibilities-title">Key Responsibilities &amp; Achievements:</h5>
+            <ul class="responsibilities-list">
+              <li>
+                <span class="bullet-icon">✦</span>
+                <div>
+                  <strong>Data Transformation &amp; Insights:</strong> Transformed complex raw datasets into meaningful, actionable insights using advanced MS Excel formulas and structured data models.
+                </div>
+              </li>
+              <li>
+                <span class="bullet-icon">✦</span>
+                <div>
+                  <strong>Visual Analytics &amp; Chart Design:</strong> Designed clear, visually engaging chart suites (bar, line, scatter, pie, and hierarchical charts) to accelerate executive decision-making.
+                </div>
+              </li>
+              <li>
+                <span class="bullet-icon">✦</span>
+                <div>
+                  <strong>Data Structuring &amp; Usability:</strong> Analyzed, cleaned, and structured business data to drastically improve clarity, consistency, and report readability.
+                </div>
+              </li>
+              <li>
+                <span class="bullet-icon">✦</span>
+                <div>
+                  <strong>Client-Ready Decks:</strong> Created polished, executive-ready presentations by translating multi-dimensional data into intuitive PowerPoint visual stories.
+                </div>
+              </li>
+              <li>
+                <span class="bullet-icon">✦</span>
+                <div>
+                  <strong>Quality Assurance &amp; Integrity:</strong> Ensured 100% accuracy and consistency across analytical deliverables through rigorous validation protocols and QA checklists.
+                </div>
+              </li>
+            </ul>
+
+            <div class="job-tools">
+              <span class="tools-label">Core Tools Used:</span>
+              <span class="tool-tag">MS Excel (Advanced)</span>
+              <span class="tool-tag">MS PowerPoint</span>
+              <span class="tool-tag">Data Visualization</span>
+              <span class="tool-tag">Data Quality Assurance</span>
+              <span class="tool-tag">Executive Reporting</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Secondary Industrial Engagements -->
+        <div class="engagements-grid">
+          <!-- Internship -->
+          <div class="engagement-card anim-reveal-left" data-delay="0">
+            <div class="engagement-type">Internship Program</div>
+            <h3>Corporate Banking Internship</h3>
+            <h4>United Commercial Bank PLC (UCB PLC)</h4>
+            <div class="engagement-meta">
+              <span>📍 Enayet Bazar, Chattogram</span>
+              <span>📅 General Banking</span>
+            </div>
+            <p>
+              Acquired comprehensive understanding of institutional banking operations, internal workflows, corporate communications, and financial record compliance within one of Bangladesh's premier private commercial banks.
+            </p>
+          </div>
+
+          <!-- BTCL Industrial Training -->
+          <div class="engagement-card anim-reveal-right" data-delay="0">
+            <div class="engagement-type">Industrial Training</div>
+            <h3>Telecommunication Systems &amp; POP Operations</h3>
+            <h4>Bangladesh Telecommunications Company Limited (BTCL)</h4>
+            <div class="engagement-meta">
+              <span>📍 BTCL Agrabad & POP Exchange, Chattogram</span>
+              <span>📅 Telecommunications Fieldwork</span>
+            </div>
+            <p>
+              Underwent intensive industrial training on public telecom infrastructure, fiber optical networks, telephone exchange operations, point of presence (POP) switching systems, and core network maintenance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── Education & Academic Credentials ───── -->
+  <section class="section section-alt" id="education">
+    <div class="container">
+      <h2 class="section-heading anim-reveal">
+        <span class="heading-number">03.</span> Educational Qualifications
+      </h2>
+
+      <div class="education-timeline">
+        <!-- EMBA -->
+        <div class="edu-card featured-edu anim-reveal-up" data-delay="0">
+          <div class="edu-header">
+            <div class="edu-title-group">
+              <span class="edu-level">Post-Graduate Degree</span>
+              <h3 class="edu-degree">Executive Master of Business Administration</h3>
+              <h4 class="edu-institution">University of Chittagong (Chittagong University Center for Business Administration - CUCBA)</h4>
+            </div>
+            <div class="edu-badge-group">
+              <span class="edu-status-badge ongoing">Currently Enrolled</span>
+              <span class="edu-year">Ongoing</span>
+            </div>
+          </div>
+          <p class="edu-desc">
+            Focusing on advanced strategic management, financial analysis, corporate leadership, operational effectiveness, and organizational dynamics.
+          </p>
+        </div>
+
+        <!-- B.Sc. ETE -->
+        <div class="edu-card anim-reveal-up" data-delay="0">
+          <div class="edu-header">
+            <div class="edu-title-group">
+              <span class="edu-level">Bachelor of Science Degree</span>
+              <h3 class="edu-degree">B.Sc. in Electronic and Telecommunication Engineering</h3>
+              <h4 class="edu-institution">International Islamic University Chittagong (IIUC)</h4>
+            </div>
+            <div class="edu-badge-group">
+              <span class="edu-status-badge completed">Graduated</span>
+              <span class="edu-year">Passing Year: 2024</span>
+            </div>
+          </div>
+          <div class="edu-grade-bar">
+            <div class="grade-pill">
+              <span class="grade-label">Cumulative GPA</span>
+              <span class="grade-score">3.041 <small>/ 4.00</small></span>
+            </div>
+            <div class="grade-context">
+              4-Year Comprehensive Engineering Curriculum encompassing Telecommunications, Digital Signal Processing, RF &amp; Microwave, Microcontrollers, and Networking.
+            </div>
+          </div>
+        </div>
+
+        <!-- HSC -->
+        <div class="edu-card anim-reveal-up" data-delay="0">
+          <div class="edu-header">
+            <div class="edu-title-group">
+              <span class="edu-level">Higher Secondary Certificate</span>
+              <h3 class="edu-degree">HSC — Science Group</h3>
+              <h4 class="edu-institution">Hazera Taju Degree College, Chittagong</h4>
+            </div>
+            <div class="edu-badge-group">
+              <span class="edu-status-badge completed">Passed</span>
+              <span class="edu-year">Passing Year: 2018</span>
+            </div>
+          </div>
+          <div class="edu-grade-bar">
+            <div class="grade-pill">
+              <span class="grade-label">GPA</span>
+              <span class="grade-score">3.58 <small>/ 5.00</small></span>
+            </div>
+            <div class="grade-context">
+              Core focus on Higher Mathematics, Physics, Chemistry, and Information Technology.
+            </div>
+          </div>
+        </div>
+
+        <!-- SSC -->
+        <div class="edu-card anim-reveal-up" data-delay="0">
+          <div class="edu-header">
+            <div class="edu-title-group">
+              <span class="edu-level">Secondary School Certificate</span>
+              <h3 class="edu-degree">SSC — Science Group</h3>
+              <h4 class="edu-institution">Chittagong Ideal High School</h4>
+            </div>
+            <div class="edu-badge-group">
+              <span class="edu-status-badge completed">Passed</span>
+              <span class="edu-year">Passing Year: 2016</span>
+            </div>
+          </div>
+          <div class="edu-grade-bar">
+            <div class="grade-pill">
+              <span class="grade-label">GPA</span>
+              <span class="grade-score">4.89 <small>/ 5.00</small></span>
+            </div>
+            <div class="grade-context">
+              Graduated with stellar academic honors in General Science and Mathematics.
             </div>
           </div>
         </div>
@@ -104,250 +436,380 @@
     </div>
   </section>
 
-  <!-- ───── Skills ───── -->
-  <section class="section section-alt" id="skills">
+  <!-- ───── Technical Skills & Proficiencies ───── -->
+  <section class="section" id="skills">
     <div class="container">
       <h2 class="section-heading anim-reveal">
-        <span class="heading-number">02.</span> Skills &amp; Tools
+        <span class="heading-number">04.</span> Technical Skills & Competencies
       </h2>
-      <div class="skills-grid">
-        <!-- Skill cards -->
-        <div class="skill-card anim-reveal-up" data-delay="0">
-          <div class="skill-icon">🎨</div>
-          <h3>Frontend</h3>
-          <div class="skill-tags">
-            <span>React</span><span>Next.js</span><span>TypeScript</span><span>Tailwind</span><span>GSAP</span>
+
+      <!-- Skill Category Filter Tabs -->
+      <div class="skills-filter-nav anim-reveal">
+        <button class="filter-btn active" data-category="all">All Disciplines</button>
+        <button class="filter-btn" data-category="office">Office &amp; Data</button>
+        <button class="filter-btn" data-category="electronics">Electronics &amp; Hardware</button>
+        <button class="filter-btn" data-category="networking">Networking &amp; IT</button>
+        <button class="filter-btn" data-category="software">Programming &amp; Web</button>
+        <button class="filter-btn" data-category="design">Creative &amp; Design</button>
+      </div>
+
+      <div class="skills-grid" id="skillsGrid">
+        <!-- Category: Office & Data -->
+        <div class="skill-card anim-reveal-up" data-category="office" data-delay="0">
+          <div class="skill-card-top">
+            <div class="skill-icon">📊</div>
+            <span class="skill-level-tag">Proficient</span>
           </div>
-          <div class="skill-bar"><div class="skill-bar-fill" data-width="92"></div></div>
-        </div>
-        <div class="skill-card anim-reveal-up" data-delay="1">
-          <div class="skill-icon">⚙️</div>
-          <h3>Backend</h3>
+          <h3>MS Office Suite</h3>
+          <p class="skill-desc">Comprehensive mastery of office productivity, data analysis, and documentation.</p>
           <div class="skill-tags">
-            <span>Node.js</span><span>Python</span><span>PostgreSQL</span><span>Redis</span><span>GraphQL</span>
+            <span>MS Word</span>
+            <span>MS Excel (Data Insights)</span>
+            <span>PowerPoint Presentations</span>
           </div>
-          <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-width="95"></div></div>
         </div>
-        <div class="skill-card anim-reveal-up" data-delay="2">
-          <div class="skill-icon">☁️</div>
-          <h3>DevOps</h3>
-          <div class="skill-tags">
-            <span>AWS</span><span>Docker</span><span>CI/CD</span><span>Terraform</span><span>K8s</span>
+
+        <!-- Category: Electronics & Hardware -->
+        <div class="skill-card anim-reveal-up" data-category="electronics" data-delay="0">
+          <div class="skill-card-top">
+            <div class="skill-icon">⚡</div>
+            <span class="skill-level-tag">Engineering Core</span>
           </div>
-          <div class="skill-bar"><div class="skill-bar-fill" data-width="78"></div></div>
-        </div>
-        <div class="skill-card anim-reveal-up" data-delay="3">
-          <div class="skill-icon">✏️</div>
-          <h3>Design</h3>
+          <h3>Electronics &amp; Embedded Systems</h3>
+          <p class="skill-desc">Hardware prototyping, circuit analysis, and microcontroller engineering.</p>
           <div class="skill-tags">
-            <span>Figma</span><span>Adobe XD</span><span>Illustrator</span><span>Motion</span><span>Prototyping</span>
+            <span>Circuit Design</span>
+            <span>PCB Layout</span>
+            <span>Microcontroller Programming</span>
+            <span>MATLAB</span>
           </div>
           <div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ───── Projects ───── -->
-  <section class="section" id="projects">
-    <div class="container">
-      <h2 class="section-heading anim-reveal">
-        <span class="heading-number">03.</span> Featured Projects
-      </h2>
-      <div class="projects-grid">
-        <!-- Project 1 -->
-        <article class="project-card anim-reveal-up" data-delay="0">
-          <div class="project-image" style="--hue: 250;">
-            <div class="project-image-inner">
-              <span class="project-placeholder-icon">🛒</span>
-            </div>
-            <div class="project-overlay">
-              <a href="#" class="project-link" aria-label="Live demo">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-              <a href="#" class="project-link" aria-label="Source code">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              </a>
-            </div>
+        <!-- Category: Networking & IT -->
+        <div class="skill-card anim-reveal-up" data-category="networking" data-delay="0">
+          <div class="skill-card-top">
+            <div class="skill-icon">📡</div>
+            <span class="skill-level-tag">Infrastructure</span>
           </div>
-          <div class="project-info">
-            <span class="project-type">Full-Stack App</span>
-            <h3>E-Commerce Platform</h3>
-            <p>A modern shopping experience with real-time inventory, AI-driven recommendations, and seamless Stripe checkout.</p>
-            <div class="project-tech">
-              <span>Next.js</span><span>Node.js</span><span>PostgreSQL</span><span>Stripe</span>
-            </div>
+          <h3>Computer Networking</h3>
+          <p class="skill-desc">Network architectures, routing protocols, perimeter security, and exchange systems.</p>
+          <div class="skill-tags">
+            <span>TCP/IP Protocols</span>
+            <span>DNS Configuration</span>
+            <span>Firewalls &amp; Security</span>
+            <span>Routers &amp; Switches</span>
           </div>
-        </article>
-        <!-- Project 2 -->
-        <article class="project-card anim-reveal-up" data-delay="1">
-          <div class="project-image" style="--hue: 160;">
-            <div class="project-image-inner">
-              <span class="project-placeholder-icon">📊</span>
-            </div>
-            <div class="project-overlay">
-              <a href="#" class="project-link" aria-label="Live demo">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-              <a href="#" class="project-link" aria-label="Source code">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              </a>
-            </div>
-          </div>
-          <div class="project-info">
-            <span class="project-type">Dashboard</span>
-            <h3>Analytics Dashboard</h3>
-            <p>Real-time data visualization dashboard with interactive charts, custom filters, and export capabilities.</p>
-            <div class="project-tech">
-              <span>React</span><span>D3.js</span><span>Python</span><span>AWS</span>
-            </div>
-          </div>
-        </article>
-        <!-- Project 3 -->
-        <article class="project-card anim-reveal-up" data-delay="2">
-          <div class="project-image" style="--hue: 30;">
-            <div class="project-image-inner">
-              <span class="project-placeholder-icon">💬</span>
-            </div>
-            <div class="project-overlay">
-              <a href="#" class="project-link" aria-label="Live demo">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-              <a href="#" class="project-link" aria-label="Source code">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              </a>
-            </div>
-          </div>
-          <div class="project-info">
-            <span class="project-type">SaaS Application</span>
-            <h3>Team Chat App</h3>
-            <p>End-to-end encrypted messaging platform with video calls, file sharing, and smart notifications.</p>
-            <div class="project-tech">
-              <span>React</span><span>Socket.io</span><span>WebRTC</span><span>MongoDB</span>
-            </div>
-          </div>
-        </article>
-        <!-- Project 4 -->
-        <article class="project-card anim-reveal-up" data-delay="3">
-          <div class="project-image" style="--hue: 340;">
-            <div class="project-image-inner">
-              <span class="project-placeholder-icon">🤖</span>
-            </div>
-            <div class="project-overlay">
-              <a href="#" class="project-link" aria-label="Live demo">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-              <a href="#" class="project-link" aria-label="Source code">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              </a>
-            </div>
-          </div>
-          <div class="project-info">
-            <span class="project-type">AI / ML</span>
-            <h3>AI Content Generator</h3>
-            <p>Intelligent content creation tool powered by LLMs with custom fine-tuning and brand voice matching.</p>
-            <div class="project-tech">
-              <span>Python</span><span>FastAPI</span><span>React</span><span>OpenAI</span>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
+          <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+        </div>
 
-  <!-- ───── Experience / Timeline ───── -->
-  <section class="section section-alt" id="experience">
-    <div class="container">
-      <h2 class="section-heading anim-reveal">
-        <span class="heading-number">04.</span> Experience
-      </h2>
-      <div class="timeline">
-        <div class="timeline-item anim-reveal-left" data-delay="0">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="timeline-date">2024 — Present</span>
-            <h3>Senior Full-Stack Engineer</h3>
-            <h4>TechCorp Inc.</h4>
-            <p>Leading a team of 8 engineers building the next-gen cloud platform. Reduced page load times by 60% and increased user engagement by 35%.</p>
+        <!-- Category: Programming -->
+        <div class="skill-card anim-reveal-up" data-category="software" data-delay="0">
+          <div class="skill-card-top">
+            <div class="skill-icon">💻</div>
+            <span class="skill-level-tag">Core Languages</span>
+          </div>
+          <h3>Basic Programming</h3>
+          <p class="skill-desc">Fundamental algorithm construction, structured programming, and procedural logic.</p>
+          <div class="skill-tags">
+            <span>C Programming</span>
+            <span>C++</span>
+            <span>Algorithmic Thinking</span>
+          </div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-width="78"></div></div>
+        </div>
+
+        <!-- Category: Creative Design -->
+        <div class="skill-card anim-reveal-up" data-category="design" data-delay="0">
+          <div class="skill-card-top">
+            <div class="skill-icon">🎨</div>
+            <span class="skill-level-tag">Certified</span>
+          </div>
+          <h3>Graphic Design Software</h3>
+          <p class="skill-desc">Visual asset creation, vector branding, layout refinement, and photo manipulation.</p>
+          <div class="skill-tags">
+            <span>Adobe Photoshop</span>
+            <span>Adobe Illustrator</span>
+            <span>Vector Graphics</span>
+            <span>Visual Layouts</span>
+          </div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-width="86"></div></div>
+        </div>
+
+        <!-- Category: Web Development -->
+        <div class="skill-card anim-reveal-up" data-category="software" data-delay="0">
+          <div class="skill-card-top">
+            <div class="skill-icon">🌐</div>
+            <span class="skill-level-tag">Markup &amp; Styling</span>
+          </div>
+          <h3>Web Development</h3>
+          <p class="skill-desc">Semantic document structuring, responsive presentation, and modern web styling.</p>
+          <div class="skill-tags">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>Responsive Layouts</span>
+          </div>
+          <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
+        </div>
+      </div>
+
+      <!-- Languages Section -->
+      <div class="language-box anim-reveal-up">
+        <div class="language-box-header">
+          <span class="box-icon">🗣️</span>
+          <div>
+            <h3>Language Proficiency</h3>
+            <p>Communication abilities in professional and interpersonal contexts</p>
           </div>
         </div>
-        <div class="timeline-item anim-reveal-right" data-delay="1">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="timeline-date">2022 — 2024</span>
-            <h3>Full-Stack Developer</h3>
-            <h4>StartupXYZ</h4>
-            <p>Built the MVP from scratch to 100K+ users. Implemented real-time collaboration features and a custom design system.</p>
+        <div class="language-bars">
+          <div class="lang-item">
+            <div class="lang-info">
+              <span class="lang-name">Bangla</span>
+              <span class="lang-level">Native / Mother Tongue</span>
+            </div>
+            <div class="lang-progress"><div class="lang-fill" style="width: 100%;"></div></div>
           </div>
-        </div>
-        <div class="timeline-item anim-reveal-left" data-delay="2">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="timeline-date">2021 — 2022</span>
-            <h3>Frontend Developer</h3>
-            <h4>Digital Agency Co.</h4>
-            <p>Delivered 20+ client projects ranging from marketing sites to complex web applications. Specialized in animation and interaction design.</p>
-          </div>
-        </div>
-        <div class="timeline-item anim-reveal-right" data-delay="3">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="timeline-date">2019 — 2021</span>
-            <h3>Junior Developer</h3>
-            <h4>WebDev Studio</h4>
-            <p>Started my professional journey building responsive websites and learning the fundamentals of scalable architecture.</p>
+          <div class="lang-item">
+            <div class="lang-info">
+              <span class="lang-name">English</span>
+              <span class="lang-level">Professional Working Proficiency</span>
+            </div>
+            <div class="lang-progress"><div class="lang-fill" style="width: 85%;"></div></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ───── Contact ───── -->
-  <section class="section" id="contact">
+  <!-- ───── Workshops & Professional Development ───── -->
+  <section class="section section-alt" id="training">
     <div class="container">
       <h2 class="section-heading anim-reveal">
-        <span class="heading-number">05.</span> Get in Touch
+        <span class="heading-number">05.</span> Workshops &amp; Certifications
       </h2>
+
+      <div class="workshops-grid">
+        <!-- BYLC CareerX -->
+        <article class="workshop-card anim-reveal-left" data-delay="0">
+          <div class="workshop-header">
+            <div class="workshop-header-main">
+              <div class="workshop-icon">🚀</div>
+              <div class="workshop-title-box">
+                <h3>CareerX — Career Development Program</h3>
+                <h4>Bangladesh Youth Leadership Center (BYLC)</h4>
+              </div>
+            </div>
+            <div class="workshop-date-badge">2022</div>
+          </div>
+          <div class="workshop-content">
+            <p>
+              Intensive leadership and professional competencies accelerator designed to prepare competitive graduates for modern corporate environments.
+            </p>
+            <ul class="workshop-bullets">
+              <li>Comprehensive training in <strong>Teamwork, Leadership, Corporate Research, and Project Management</strong>.</li>
+              <li>Mastery of methodical case-study analysis, hypothesis testing, and practical solution structuring.</li>
+              <li>Hands-on business decision-making frameworks under real-world time and resource constraints.</li>
+            </ul>
+            <div class="workshop-tags">
+              <span>Leadership</span>
+              <span>Case Analysis</span>
+              <span>Decision Making</span>
+              <span>Team Dynamics</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Creative IT -->
+        <article class="workshop-card anim-reveal-right" data-delay="0">
+          <div class="workshop-header">
+            <div class="workshop-header-main">
+              <div class="workshop-icon">🎯</div>
+              <div class="workshop-title-box">
+                <h3>Professional Graphics Design</h3>
+                <h4>Creative IT Institute, Chattogram</h4>
+              </div>
+            </div>
+            <div class="workshop-date-badge">2021</div>
+          </div>
+          <div class="workshop-content">
+            <p>
+              In-depth hands-on vocational immersion in industry-standard graphic creation suites, brand identity design, and market trends.
+            </p>
+            <ul class="workshop-bullets">
+              <li>Applied mastery of <strong>Adobe Photoshop, Adobe Illustrator, and MS PowerPoint</strong> for media design.</li>
+              <li>Market research methodologies to identify emerging visual trends and client communication needs.</li>
+              <li>Strategic competitor analysis and presentation techniques for freelance and commercial client pitches.</li>
+            </ul>
+            <div class="workshop-tags">
+              <span>Adobe Photoshop</span>
+              <span>Adobe Illustrator</span>
+              <span>Brand Assets</span>
+              <span>Market Research</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── Academic References ───── -->
+  <section class="section" id="references">
+    <div class="container">
+      <h2 class="section-heading anim-reveal">
+        <span class="heading-number">06.</span> Academic &amp; Professional References
+      </h2>
+
+      <p class="section-subtitle anim-reveal">
+        Distinguished faculty members from the International Islamic University Chittagong (IIUC) available for academic verification and character reference:
+      </p>
+
+      <div class="references-grid">
+        <!-- Reference 1 -->
+        <div class="reference-card anim-reveal-up" data-delay="0">
+          <div class="ref-badge">Primary Academic Referee</div>
+          <div class="ref-avatar">
+            <span>MI</span>
+          </div>
+          <h3 class="ref-name">Mr. Md. Ibrahim</h3>
+          <p class="ref-role">Assistant Professor</p>
+          <p class="ref-dept">Department of Electronic &amp; Telecommunication Engineering (ETE)</p>
+          <p class="ref-uni">International Islamic University Chittagong (IIUC)</p>
+
+          <div class="ref-contact-links">
+            <a href="mailto:ahm.ibrahim.r@gmail.com" class="ref-link" title="Send email to Mr. Md. Ibrahim">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 4-10 8L2 4"></path></svg>
+              <span>ahm.ibrahim.r@gmail.com</span>
+            </a>
+            <a href="tel:+8801817750772" class="ref-link" title="Call Mr. Md. Ibrahim">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>+880 1817 750772</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Reference 2 -->
+        <div class="reference-card anim-reveal-up" data-delay="0">
+          <div class="ref-badge">Department Faculty Referee</div>
+          <div class="ref-avatar">
+            <span>JH</span>
+          </div>
+          <h3 class="ref-name">Mr. Md. Jiabul Hoque</h3>
+          <p class="ref-role">Assistant Professor</p>
+          <p class="ref-dept">Department of Computer &amp; Communication Engineering (CCE)</p>
+          <p class="ref-uni">International Islamic University Chittagong (IIUC)</p>
+
+          <div class="ref-contact-links">
+            <a href="mailto:jia99cse@yahoo.com" class="ref-link" title="Send email to Md Jiabul Hoque">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 4-10 8L2 4"></path></svg>
+              <span>jia99cse@yahoo.com</span>
+            </a>
+            <a href="tel:+8801989685996" class="ref-link" title="Call Md Jiabul Hoque">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>+880 1989 685996</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── Contact & Inquiries ───── -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <h2 class="section-heading anim-reveal">
+        <span class="heading-number">07.</span> Contact & Communication
+      </h2>
+
       <div class="contact-grid">
         <div class="contact-text anim-reveal-left">
-          <p class="contact-lead">Have a project in mind? Let's build something amazing together.</p>
-          <p>I'm currently open to freelance work and full-time opportunities. Whether you have a question or just want to say hi, my inbox is always open.</p>
-          <div class="contact-links">
-            <a href="mailto:hello@johndoe.dev" class="contact-link-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 4-10 8L2 4"/></svg>
-              hello@johndoe.dev
-            </a>
-            <a href="#" class="contact-link-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              github.com/johndoe
-            </a>
-            <a href="#" class="contact-link-item">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-              linkedin.com/in/johndoe
-            </a>
+          <p class="contact-lead">Looking for a dedicated engineer or analytical data professional?</p>
+          <p>
+            I am currently open to prospective full-time corporate opportunities, technical roles in Electronics, Telecommunications, Data Analytics, and IT systems operations. Feel free to contact me directly via phone, email, or by submitting this message form.
+          </p>
+
+          <div class="contact-cards">
+            <!-- Email -->
+            <div class="contact-card copy-btn" data-copy="motasim.official@gmail.com" title="Click to copy email">
+              <div class="contact-card-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 4-10 8L2 4"></path></svg>
+              </div>
+              <div class="contact-card-details">
+                <span class="card-label">Primary Email</span>
+                <span class="card-value">motasim.official@gmail.com</span>
+              </div>
+              <span class="copy-hint">Copy</span>
+            </div>
+
+            <!-- Phone -->
+            <div class="contact-card copy-btn" data-copy="+8801517998512" title="Click to copy phone">
+              <div class="contact-card-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div class="contact-card-details">
+                <span class="card-label">Phone & WhatsApp</span>
+                <span class="card-value">+88 01 517998512</span>
+              </div>
+              <span class="copy-hint">Copy</span>
+            </div>
+
+            <!-- Location -->
+            <div class="contact-card">
+              <div class="contact-card-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div class="contact-card-details">
+                <span class="card-label">Mailing Address</span>
+                <span class="card-value">BAB - E - Idris, Mousumi Mor, 17 - West Bakalia, Chattogram, Bangladesh</span>
+              </div>
+            </div>
           </div>
         </div>
+
         <form class="contact-form anim-reveal-right" id="contactForm">
+          <h3 class="form-title">Send a Direct Message</h3>
           <div class="form-group">
             <input type="text" id="name" required placeholder=" " />
-            <label for="name">Your Name</label>
+            <label for="name">Your Name / Organization</label>
             <div class="form-line"></div>
           </div>
           <div class="form-group">
             <input type="email" id="email" required placeholder=" " />
-            <label for="email">Your Email</label>
+            <label for="email">Your Email Address</label>
             <div class="form-line"></div>
           </div>
           <div class="form-group">
-            <textarea id="message" rows="5" required placeholder=" "></textarea>
-            <label for="message">Your Message</label>
+            <input type="text" id="subject" required placeholder=" " />
+            <label for="subject">Subject / Opportunity Title</label>
+            <div class="form-line"></div>
+          </div>
+          <div class="form-group">
+            <textarea id="message" rows="4" required placeholder=" "></textarea>
+            <label for="message">Message Details</label>
             <div class="form-line"></div>
           </div>
           <button type="submit" class="btn btn-primary btn-full">
-            <span>Send Message</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            <span>Send Direct Message</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
           </button>
         </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── Official Declaration & Signature ───── -->
+  <section class="section signature-section">
+    <div class="container">
+      <div class="signature-card anim-reveal-up">
+        <p class="declaration-text">
+          I hereby declare that all information presented in this Curriculum Vitae is true, authentic, and complete to the best of my knowledge and belief.
+        </p>
+        <div class="signature-block">
+          <div class="signature-line"></div>
+          <div class="signature-name">MOHAMMAD MOTASIM BIN NAZIR</div>
+          <div class="signature-title">Candidate Signature & Official Declaration</div>
+        </div>
       </div>
     </div>
   </section>
@@ -356,23 +818,24 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <a href="#" class="footer-logo">JD<span class="accent">.</span></a>
-        <div class="footer-socials">
-          <a href="#" aria-label="GitHub">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-          </a>
-          <a href="#" aria-label="LinkedIn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          </a>
-          <a href="#" aria-label="Twitter / X">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l11.7 16H20L8.3 4H4z"/><path d="M4 20l6.8-9.3"/><path d="M20 4l-6.8 9.3"/></svg>
-          </a>
+        <a href="#home" class="footer-logo">
+          Motasim<span class="accent">.cv</span>
+        </a>
+        <div class="footer-quick-nav">
+          <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
+          <a href="#skills">Skills</a>
+          <a href="#references">References</a>
+          <a href="CV of Motasim.pdf" download="CV_of_Mohammad_Motasim.pdf">Download PDF</a>
         </div>
-        <p class="footer-copy">&copy; 2026 John Doe. Built with ☕ and passion.</p>
+        <p class="footer-copy">
+          &copy; 2026 Mohammad Motasim Bin Nazir.
+        </p>
       </div>
     </div>
   </footer>
 
+  <!-- Main JavaScript File -->
   <script src="script.js"></script>
 </body>
 </html>
