@@ -2486,6 +2486,14 @@ input, textarea { font: inherit; color: inherit; }
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    padding: 0.85rem 1.25rem;
+  }
+
+  .navbar.scrolled {
+    padding: 0.7rem 1.25rem;
+  }
+
   .nav-actions {
     display: none;
   }
@@ -2524,18 +2532,29 @@ input, textarea { font: inherit; color: inherit; }
   }
 
   .hero-photo-container {
-    width: 130px;
-    height: 130px;
+    width: 160px;
+    height: 160px;
   }
 
   .hero-name {
     font-size: clamp(2rem, 7vw, 3.2rem);
     letter-spacing: -1px;
+    line-height: 1.15;
   }
 
   .hero-title-wrapper {
     font-size: clamp(1.05rem, 3.5vw, 1.4rem);
-    min-height: 2rem;
+    min-height: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-title-static {
+    text-align: center;
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+    line-height: 1.65;
   }
 
   .quick-contact-bar {
@@ -2622,53 +2641,78 @@ input, textarea { font: inherit; color: inherit; }
 }
 
 @media (max-width: 480px) {
+  .navbar {
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar.scrolled {
+    padding: 0.65rem 1rem;
+  }
+
   .hero {
     padding: 5.5rem 1rem 3rem;
   }
 
   .hero-photo-container {
-    width: 118px;
-    height: 118px;
+    width: 140px;
+    height: 140px;
   }
 
   .hero-name {
-    font-size: clamp(1.75rem, 8vw, 2.35rem);
+    font-size: clamp(1.75rem, 8vw, 2.5rem);
     letter-spacing: -0.5px;
+    line-height: 1.2;
   }
 
   .hero-title-wrapper {
-    font-size: 0.98rem;
-    min-height: 2rem;
+    font-size: clamp(0.95rem, 4vw, 1.15rem);
+    min-height: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-desc {
+    font-size: 0.95rem;
+    line-height: 1.7;
   }
 
   .contact-pill {
-    padding: 0.65rem 0.85rem;
-    font-size: 0.78rem;
-    gap: 0.45rem;
+    width: 100%;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    font-size: 0.82rem;
   }
 
   .contact-pill .pill-text {
-    word-break: break-all;
+    word-break: break-word;
+    text-align: left;
   }
 
   .hero-cta {
     flex-direction: column;
     align-items: stretch;
-    gap: 0.75rem;
+    gap: 0.85rem;
+    margin-bottom: 3rem;
   }
 
   .btn {
     justify-content: center;
     width: 100%;
-    padding: 0.85rem 1.25rem;
+    padding: 0.9rem 1.25rem;
+    font-size: 0.9rem;
   }
 
   .objective-card {
-    padding: 1.5rem 1.25rem;
+    padding: 1.75rem 1.25rem;
   }
 
   .quote-badge {
-    font-size: 3rem;
+    font-size: 2.75rem;
+  }
+
+  .objective-quote {
+    font-size: 0.95rem;
+    line-height: 1.75;
   }
 
   .metrics-grid {
@@ -2677,27 +2721,155 @@ input, textarea { font: inherit; color: inherit; }
   }
 
   .metric-card {
-    padding: 1.25rem 1rem;
+    padding: 1.25rem 1.1rem;
+  }
+
+  .metric-icon {
+    font-size: 1.8rem;
+  }
+
+  .metric-title {
+    font-size: 0.9rem;
+    white-space: normal;
+  }
+
+  .metric-sub {
+    font-size: 0.78rem;
   }
 
   .personal-info-container {
-    padding: 1.5rem 1.25rem;
+    padding: 1.75rem 1.25rem;
+  }
+
+  .info-item {
+    padding: 0.9rem 1rem;
+  }
+
+  .info-value {
+    font-size: 0.9rem;
   }
 
   .job-card {
-    padding: 1.5rem 1.25rem;
+    padding: 1.75rem 1.25rem;
+  }
+
+  .job-title {
+    font-size: 1.4rem;
+    line-height: 1.3;
+  }
+
+  .job-summary {
+    font-size: 0.95rem;
+    padding-left: 0.85rem;
+    border-left-width: 2px;
+  }
+
+  .responsibilities-list li div {
+    font-size: 0.9rem;
+  }
+
+  .tool-tag {
+    font-size: 0.78rem;
+    padding: 0.3rem 0.75rem;
   }
 
   .edu-card {
-    padding: 1.5rem 1.25rem;
+    padding: 1.75rem 1.25rem;
+  }
+
+  .edu-degree {
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+
+  .edu-desc {
+    font-size: 0.9rem;
+  }
+
+  .grade-pill {
+    padding: 0.65rem 1rem;
+  }
+
+  .grade-score {
+    font-size: 1.3rem;
   }
 
   .workshop-card {
-    padding: 1.5rem 1.25rem;
+    padding: 1.75rem 1.25rem;
+  }
+
+  .workshop-title-box h3 {
+    font-size: 1.15rem;
+    line-height: 1.4;
+  }
+
+  .workshop-content p {
+    font-size: 0.9rem;
+  }
+
+  .workshop-bullets li {
+    font-size: 0.88rem;
   }
 
   .reference-card {
-    padding: 1.5rem 1.25rem;
+    padding: 1.75rem 1.25rem;
+  }
+
+  .ref-name {
+    font-size: 1.25rem;
+  }
+
+  .ref-link {
+    font-size: 0.82rem;
+    padding: 0.7rem 0.9rem;
+  }
+
+  .skill-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .skill-card h3 {
+    font-size: 1.15rem;
+  }
+
+  .skill-desc {
+    font-size: 0.87rem;
+  }
+
+  .skill-tags span {
+    font-size: 0.74rem;
+  }
+
+  .contact-card {
+    padding: 1.15rem 1rem;
+  }
+
+  .contact-card-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .contact-card-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .card-label {
+    font-size: 0.73rem;
+  }
+
+  .card-value {
+    font-size: 0.9rem;
+    word-break: break-word;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.95rem;
+  }
+
+  .form-title {
+    font-size: 1.2rem;
   }
 
   .skills-filter-nav {
@@ -2727,28 +2899,38 @@ input, textarea { font: inherit; color: inherit; }
   }
 
   .section-heading {
-    font-size: 1.45rem;
+    font-size: clamp(1.4rem, 5vw, 1.8rem);
     gap: 0.5rem;
-    margin-bottom: 2.25rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
   }
 
   .heading-number {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
 
   .section-heading::after {
-    max-width: 80px;
+    max-width: 100px;
   }
 
   .signature-card {
-    padding: 1.5rem 1.25rem;
+    padding: 1.75rem 1.25rem;
+  }
+
+  .declaration-text {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
   }
 
   .signature-line {
-    width: 180px;
+    width: 200px;
   }
 
   .signature-name {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
+  }
+
+  .signature-title {
+    font-size: 0.78rem;
   }
 }
