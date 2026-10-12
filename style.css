@@ -134,7 +134,7 @@ textarea {
    2. Navbar
    ═══════════════════════════════════════════════ */
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -3080,5 +3080,39 @@ body.light-mode .moon-icon {
   .btn {
     padding: 0.8rem 1.5rem;
     font-size: 0.9rem;
+  }
+
+  /* Contact Section - Center Alignment */
+
+  .contact-lead {
+    text-align: left;
+  }
+
+  .contact-text {
+    text-align: left;
+  }
+
+  .contact-cards {
+    align-items: left;
+    max-width: auto;
+  }
+
+  .contact-card {
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .copy-btn {
+    align-items: center;
+    padding: 1rem 0rem 1rem 1rem;
+  }
+
+  .contact-form {
+    padding: 0px 20px 0px 20px;
+    align-items: left;
+  }
+
+  .form-title {
+    text-align: left;
   }
 }

@@ -102,19 +102,53 @@
   const navLinks = document.querySelector('.nav-links');
 
   if (navToggle && navLinks) {
+    let scrollPosition = 0;
+    let shouldRestoreScroll = true;
+
+    const openMenu = () => {
+      scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      navToggle.classList.add('active');
+      navLinks.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    };
+
+    const closeMenu = (restoreScroll = true) => {
+      navToggle.classList.remove('active');
+      navLinks.classList.remove('open');
+      document.body.style.overflow = '';
+
+      if (restoreScroll) {
+        // Use requestAnimationFrame to ensure scroll happens after DOM updates
+        requestAnimationFrame(() => {
+          window.scrollTo(0, scrollPosition);
+        });
+      }
+    };
+
     navToggle.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
-      navToggle.classList.toggle('active');
-      navLinks.classList.toggle('open');
-      document.body.classList.toggle('nav-open');
+
+      if (navLinks.classList.contains('open')) {
+        closeMenu(true);
+      } else {
+        openMenu();
+      }
     });
 
+    // Close menu when clicking overlay
+    navLinks.addEventListener('click', (e) => {
+      if (e.target === navLinks) {
+        e.preventDefault();
+        e.stopPropagation();
+        closeMenu(true);
+      }
+    });
+
+    // Close menu when clicking navigation links - don't restore scroll
     navLinks.querySelectorAll('a').forEach((a) => {
       a.addEventListener('click', () => {
-        navToggle.classList.remove('active');
-        navLinks.classList.remove('open');
-        document.body.classList.remove('nav-open');
+        closeMenu(false); // Don't restore scroll position, let the anchor navigate
       });
     });
   }
