@@ -60,6 +60,8 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
   font-size: 16px;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -68,6 +70,8 @@ body {
   color: var(--text);
   line-height: 1.7;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -2680,12 +2684,23 @@ body.light-mode .moon-icon {
 @media (max-width: 992px) {
   html {
     scroll-padding-top: 70px;
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+    max-width: 100vw;
+    position: relative;
   }
 
   .navbar {
-    position: sticky;
+    position: fixed;
+    top: 0;
     padding: 0.85rem 1.5rem;
     z-index: 9999 !important;
+    width: 100%;
+    left: 0;
+    right: 0;
   }
 
   .nav-actions {
@@ -2722,6 +2737,7 @@ body.light-mode .moon-icon {
     gap: 0;
     padding: 1.5rem;
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
     transition: all 0.35s cubic-bezier(.25, .46, .45, .94);
     z-index: 9998;
@@ -2738,6 +2754,7 @@ body.light-mode .moon-icon {
 
   .nav-links.open {
     opacity: 1;
+    visibility: visible;
     pointer-events: all;
     transform: translateX(0);
   }
@@ -2748,12 +2765,13 @@ body.light-mode .moon-icon {
     position: fixed;
     top: 0;
     left: 0;
-    right: 50vw;
-    bottom: 0;
+    width: 50vw;
+    height: 100vh;
     background: rgba(0, 0, 0, 0.6);
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
-    transition: opacity 0.35s ease;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
     z-index: -1;
   }
 
@@ -2763,6 +2781,7 @@ body.light-mode .moon-icon {
 
   .nav-links.open::before {
     opacity: 1;
+    visibility: visible;
     pointer-events: all;
   }
 
@@ -2843,7 +2862,14 @@ body.light-mode .moon-icon {
 /* Smartphones (768px and below) */
 @media (max-width: 768px) {
   html {
-    scroll-padding-top: 15px;
+    scroll-padding-top: 65px;
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+    max-width: 100vw;
+    position: relative;
   }
 
   .btn-sm {
@@ -2851,9 +2877,13 @@ body.light-mode .moon-icon {
   }
 
   .navbar {
-    position: sticky;
+    position: fixed;
+    top: 0;
     padding: 0.75rem 1.25rem;
     z-index: 9999;
+    width: 100%;
+    left: 0;
+    right: 0;
   }
 
   .nav-logo {
@@ -2979,10 +3009,24 @@ body.light-mode .moon-icon {
 
 /* Small Smartphones (480px and below) */
 @media (max-width: 480px) {
+  html {
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+    max-width: 100vw;
+    position: relative;
+  }
+
   .navbar {
-    position: sticky;
+    position: fixed;
+    top: 0;
     padding: 0.65rem 1rem;
     z-index: 9999;
+    width: 100%;
+    left: 0;
+    right: 0;
   }
 
   .nav-actions {

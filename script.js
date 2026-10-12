@@ -102,7 +102,9 @@
   const navLinks = document.querySelector('.nav-links');
 
   if (navToggle && navLinks) {
-    navToggle.addEventListener('click', () => {
+    navToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
       navToggle.classList.toggle('active');
       navLinks.classList.toggle('open');
       document.body.classList.toggle('nav-open');
