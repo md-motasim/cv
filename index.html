@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Curriculum Vitae — Mohammad Motasim Bin Nazir</title>
-  <meta name="description" content="Dynamic CV of Mohammad Motasim Bin Nazir — B.Sc. in Electronic and Telecommunication Engineering, EMBA Candidate, Data Artist, and IT Specialist." />
+  <meta name="description"
+    content="Dynamic CV of Mohammad Motasim Bin Nazir — B.Sc. in Electronic and Telecommunication Engineering, EMBA Candidate, Data Artist, and IT Specialist." />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <!-- ───── Toast Notification ───── -->
   <div class="toast" id="toast" role="status" aria-live="polite">Copied to clipboard!</div>
@@ -40,22 +45,36 @@
 
     <div class="nav-actions">
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle Light/Dark Mode">
-        <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
         </svg>
-        <svg class="moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg class="moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
         </svg>
       </button>
-      <a href="CV of Motasim.pdf" download="CV_of_Mohammad_Motasim.pdf" class="btn btn-sm btn-primary" title="Download Official PDF CV">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+      <a href="CV of Motasim.pdf" download="CV_of_Mohammad_Motasim.pdf" class="btn btn-sm btn-primary"
+        title="Download Official PDF CV">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
         <span>Download PDF</span>
       </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
   </header>
 
   <!-- ───── Hero / CV Header ───── -->
@@ -96,30 +115,46 @@
       <!-- Quick Contact Pills -->
       <div class="quick-contact-bar anim-reveal" data-delay="3">
         <button class="contact-pill copy-btn" data-copy="+8801517998512" title="Click to copy phone number">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg>
           <span class="pill-text">+88 01 517998512</span>
           <span class="pill-action">Copy</span>
         </button>
 
-        <button class="contact-pill copy-btn" data-copy="motasim.official@gmail.com" title="Click to copy email address">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 4-10 8L2 4"></path></svg>
+        <button class="contact-pill copy-btn" data-copy="motasim.official@gmail.com"
+          title="Click to copy email address">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+            <path d="m22 4-10 8L2 4"></path>
+          </svg>
           <span class="pill-text">motasim.official@gmail.com</span>
           <span class="pill-action">Copy</span>
         </button>
 
         <div class="contact-pill" title="Location">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
           <span class="pill-text">Bakalia, Chattogram, Bangladesh</span>
         </div>
       </div>
 
       <p class="hero-desc anim-reveal" data-delay="4">
-        Engineering graduate (B.Sc. in ETE) and E.MBA candidate with proven hands-on experience in data transformation, electronics, telecommunications infrastructure, and corporate operations.
+        Engineering graduate (B.Sc. in ETE) and E.MBA candidate with proven hands-on experience in data transformation,
+        electronics, telecommunications infrastructure, and corporate operations.
       </p>
 
       <div class="hero-cta anim-reveal" data-delay="5">
         <a href="CV of Motasim.pdf" download="CV_of_Mohammad_Motasim.pdf" class="btn btn-primary">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
           <span>Download Official CV (.PDF)</span>
         </a>
         <a href="#experience" class="btn btn-outline">Explore Experience &amp; Skills</a>
@@ -151,7 +186,9 @@
           </div>
         </div>
         <p class="objective-quote">
-          Hardworking and self-learner with a motivated attitude and a variety of up-to-date skills. Adept in various social media platforms and office technology programs. Committed to contributing my expertise in a dynamic office environment related to Electronics, Telecommunications and IT field.
+          Hardworking and self-learner with a motivated attitude and a variety of up-to-date skills. Adept in various
+          social media platforms and office technology programs. Committed to contributing my expertise in a dynamic
+          office environment related to Electronics, Telecommunications and IT field.
         </p>
       </div>
 
@@ -200,7 +237,8 @@
           </div>
           <div class="info-item">
             <span class="info-label">Father's Name</span>
-            <span class="info-value">Nazir Ahmed Jahedy <small>(Senior Executive Officer, ROC Agrabad, UCB PLC)</small></span>
+            <span class="info-value">Nazir Ahmed Jahedy <small>(Senior Executive Officer, ROC Agrabad, UCB
+                PLC)</small></span>
           </div>
           <div class="info-item">
             <span class="info-label">Mother's Name</span>
@@ -246,13 +284,23 @@
               <div class="job-badge">Recent Employment</div>
               <h3 class="job-title">Data Artist <span class="job-level">(Associate)</span></h3>
               <h4 class="company-name">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"></path><path d="M3 7v14"></path><path d="M21 7v14"></path><path d="M9 3h6v4H9z"></path></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 21h18"></path>
+                  <path d="M3 7v14"></path>
+                  <path d="M21 7v14"></path>
+                  <path d="M9 3h6v4H9z"></path>
+                </svg>
                 Catalyst Solutions — Chattogram Branch
               </h4>
             </div>
             <div class="job-meta">
               <span class="job-date">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
                 November 2025 — April 2026
               </span>
               <span class="job-location">Chattogram, Bangladesh</span>
@@ -261,7 +309,8 @@
 
           <div class="job-body">
             <p class="job-summary">
-              Specialized in converting raw corporate data into high-impact, decision-ready visual assets and executive presentations for enterprise stakeholders.
+              Specialized in converting raw corporate data into high-impact, decision-ready visual assets and executive
+              presentations for enterprise stakeholders.
             </p>
 
             <h5 class="responsibilities-title">Key Responsibilities &amp; Achievements:</h5>
@@ -269,31 +318,36 @@
               <li>
                 <span class="bullet-icon">✦</span>
                 <div>
-                  <strong>Data Transformation &amp; Insights:</strong> Transformed complex raw datasets into meaningful, actionable insights using advanced MS Excel formulas and structured data models.
+                  <strong>Data Transformation &amp; Insights:</strong> Transformed complex raw datasets into meaningful,
+                  actionable insights using advanced MS Excel formulas and structured data models.
                 </div>
               </li>
               <li>
                 <span class="bullet-icon">✦</span>
                 <div>
-                  <strong>Visual Analytics &amp; Chart Design:</strong> Designed clear, visually engaging chart suites (bar, line, scatter, pie, and hierarchical charts) to accelerate executive decision-making.
+                  <strong>Visual Analytics &amp; Chart Design:</strong> Designed clear, visually engaging chart suites
+                  (bar, line, scatter, pie, and hierarchical charts) to accelerate executive decision-making.
                 </div>
               </li>
               <li>
                 <span class="bullet-icon">✦</span>
                 <div>
-                  <strong>Data Structuring &amp; Usability:</strong> Analyzed, cleaned, and structured business data to drastically improve clarity, consistency, and report readability.
+                  <strong>Data Structuring &amp; Usability:</strong> Analyzed, cleaned, and structured business data to
+                  drastically improve clarity, consistency, and report readability.
                 </div>
               </li>
               <li>
                 <span class="bullet-icon">✦</span>
                 <div>
-                  <strong>Client-Ready Decks:</strong> Created polished, executive-ready presentations by translating multi-dimensional data into intuitive PowerPoint visual stories.
+                  <strong>Client-Ready Decks:</strong> Created polished, executive-ready presentations by translating
+                  multi-dimensional data into intuitive PowerPoint visual stories.
                 </div>
               </li>
               <li>
                 <span class="bullet-icon">✦</span>
                 <div>
-                  <strong>Quality Assurance &amp; Integrity:</strong> Ensured 100% accuracy and consistency across analytical deliverables through rigorous validation protocols and QA checklists.
+                  <strong>Quality Assurance &amp; Integrity:</strong> Ensured 100% accuracy and consistency across
+                  analytical deliverables through rigorous validation protocols and QA checklists.
                 </div>
               </li>
             </ul>
@@ -321,7 +375,9 @@
               <span>📅 General Banking</span>
             </div>
             <p>
-              Acquired comprehensive understanding of institutional banking operations, internal workflows, corporate communications, and financial record compliance within one of Bangladesh's premier private commercial banks.
+              Acquired comprehensive understanding of institutional banking operations, internal workflows, corporate
+              communications, and financial record compliance within one of Bangladesh's premier private commercial
+              banks.
             </p>
           </div>
 
@@ -335,7 +391,8 @@
               <span>📅 Telecommunications Fieldwork</span>
             </div>
             <p>
-              Underwent intensive industrial training on public telecom infrastructure, fiber optical networks, telephone exchange operations, point of presence (POP) switching systems, and core network maintenance.
+              Underwent intensive industrial training on public telecom infrastructure, fiber optical networks,
+              telephone exchange operations, point of presence (POP) switching systems, and core network maintenance.
             </p>
           </div>
         </div>
@@ -357,7 +414,8 @@
             <div class="edu-title-group">
               <span class="edu-level">Post-Graduate Degree</span>
               <h3 class="edu-degree">Executive Master of Business Administration</h3>
-              <h4 class="edu-institution">University of Chittagong (Chittagong University Center for Business Administration - CUCBA)</h4>
+              <h4 class="edu-institution">University of Chittagong (Chittagong University Center for Business
+                Administration - CUCBA)</h4>
             </div>
             <div class="edu-badge-group">
               <span class="edu-status-badge ongoing">Currently Enrolled</span>
@@ -365,7 +423,8 @@
             </div>
           </div>
           <p class="edu-desc">
-            Focusing on advanced strategic management, financial analysis, corporate leadership, operational effectiveness, and organizational dynamics.
+            Focusing on advanced strategic management, financial analysis, corporate leadership, operational
+            effectiveness, and organizational dynamics.
           </p>
         </div>
 
@@ -388,7 +447,8 @@
               <span class="grade-score">3.041 <small>/ 4.00</small></span>
             </div>
             <div class="grade-context">
-              4-Year Comprehensive Engineering Curriculum encompassing Telecommunications, Digital Signal Processing, RF &amp; Microwave, Microcontrollers, and Networking.
+              4-Year Comprehensive Engineering Curriculum encompassing Telecommunications, Digital Signal Processing, RF
+              &amp; Microwave, Microcontrollers, and Networking.
             </div>
           </div>
         </div>
@@ -475,7 +535,9 @@
             <span>MS Excel (Data Insights)</span>
             <span>PowerPoint Presentations</span>
           </div>
-          <div class="skill-bar"><div class="skill-bar-fill" data-width="95"></div></div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="95"></div>
+          </div>
         </div>
 
         <!-- Category: Electronics & Hardware -->
@@ -492,7 +554,9 @@
             <span>Microcontroller Programming</span>
             <span>MATLAB</span>
           </div>
-          <div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="88"></div>
+          </div>
         </div>
 
         <!-- Category: Networking & IT -->
@@ -509,7 +573,9 @@
             <span>Firewalls &amp; Security</span>
             <span>Routers &amp; Switches</span>
           </div>
-          <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="85"></div>
+          </div>
         </div>
 
         <!-- Category: Programming -->
@@ -525,7 +591,9 @@
             <span>C++</span>
             <span>Algorithmic Thinking</span>
           </div>
-          <div class="skill-bar"><div class="skill-bar-fill" data-width="78"></div></div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="78"></div>
+          </div>
         </div>
 
         <!-- Category: Creative Design -->
@@ -542,7 +610,9 @@
             <span>Vector Graphics</span>
             <span>Visual Layouts</span>
           </div>
-          <div class="skill-bar"><div class="skill-bar-fill" data-width="86"></div></div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="86"></div>
+          </div>
         </div>
 
         <!-- Category: Web Development -->
@@ -558,7 +628,9 @@
             <span>CSS3</span>
             <span>Responsive Layouts</span>
           </div>
-          <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="80"></div>
+          </div>
         </div>
       </div>
 
@@ -577,14 +649,18 @@
               <span class="lang-name">Bangla</span>
               <span class="lang-level">Native / Mother Tongue</span>
             </div>
-            <div class="lang-progress"><div class="lang-fill" style="width: 100%;"></div></div>
+            <div class="lang-progress">
+              <div class="lang-fill" style="width: 100%;"></div>
+            </div>
           </div>
           <div class="lang-item">
             <div class="lang-info">
               <span class="lang-name">English</span>
               <span class="lang-level">Professional Working Proficiency</span>
             </div>
-            <div class="lang-progress"><div class="lang-fill" style="width: 85%;"></div></div>
+            <div class="lang-progress">
+              <div class="lang-fill" style="width: 85%;"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -613,11 +689,14 @@
           </div>
           <div class="workshop-content">
             <p>
-              Intensive leadership and professional competencies accelerator designed to prepare competitive graduates for modern corporate environments.
+              Intensive leadership and professional competencies accelerator designed to prepare competitive graduates
+              for modern corporate environments.
             </p>
             <ul class="workshop-bullets">
-              <li>Comprehensive training in <strong>Teamwork, Leadership, Corporate Research, and Project Management</strong>.</li>
-              <li>Mastery of methodical case-study analysis, hypothesis testing, and practical solution structuring.</li>
+              <li>Comprehensive training in <strong>Teamwork, Leadership, Corporate Research, and Project
+                  Management</strong>.</li>
+              <li>Mastery of methodical case-study analysis, hypothesis testing, and practical solution structuring.
+              </li>
               <li>Hands-on business decision-making frameworks under real-world time and resource constraints.</li>
             </ul>
             <div class="workshop-tags">
@@ -643,12 +722,15 @@
           </div>
           <div class="workshop-content">
             <p>
-              In-depth hands-on vocational immersion in industry-standard graphic creation suites, brand identity design, and market trends.
+              In-depth hands-on vocational immersion in industry-standard graphic creation suites, brand identity
+              design, and market trends.
             </p>
             <ul class="workshop-bullets">
-              <li>Applied mastery of <strong>Adobe Photoshop, Adobe Illustrator, and MS PowerPoint</strong> for media design.</li>
+              <li>Applied mastery of <strong>Adobe Photoshop, Adobe Illustrator, and MS PowerPoint</strong> for media
+                design.</li>
               <li>Market research methodologies to identify emerging visual trends and client communication needs.</li>
-              <li>Strategic competitor analysis and presentation techniques for freelance and commercial client pitches.</li>
+              <li>Strategic competitor analysis and presentation techniques for freelance and commercial client pitches.
+              </li>
             </ul>
             <div class="workshop-tags">
               <span>Adobe Photoshop</span>
@@ -670,7 +752,8 @@
       </h2>
 
       <p class="section-subtitle anim-reveal">
-        Distinguished faculty members from the <b>International Islamic University Chittagong (IIUC)</b> available for academic verification and character reference:
+        Distinguished faculty members from the <b>International Islamic University Chittagong (IIUC)</b> available for
+        academic verification and character reference:
       </p>
 
       <div class="references-grid">
@@ -687,11 +770,18 @@
 
           <div class="ref-contact-links">
             <a href="mailto:ahm.ibrahim.r@gmail.com" class="ref-link" title="Send email to Mr. Md. Ibrahim">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 4-10 8L2 4"></path></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="m22 4-10 8L2 4"></path>
+              </svg>
               <span>ahm.ibrahim.r@gmail.com</span>
             </a>
             <a href="tel:+8801817750772" class="ref-link" title="Call Mr. Md. Ibrahim">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
               <span>+880 1817 750772</span>
             </a>
           </div>
@@ -710,11 +800,18 @@
 
           <div class="ref-contact-links">
             <a href="mailto:jia99cse@yahoo.com" class="ref-link" title="Send email to Md Jiabul Hoque">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 4-10 8L2 4"></path></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="m22 4-10 8L2 4"></path>
+              </svg>
               <span>jia99cse@yahoo.com</span>
             </a>
             <a href="tel:+8801989685996" class="ref-link" title="Call Md Jiabul Hoque">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
               <span>+880 1989 685996</span>
             </a>
           </div>
@@ -734,14 +831,19 @@
         <div class="contact-text anim-reveal-left">
           <p class="contact-lead">Looking for a dedicated engineer or analytical data professional?</p>
           <p>
-            I am currently open to prospective full-time corporate opportunities, technical roles in Electronics, Telecommunications, Data Analytics, and IT systems operations. Feel free to contact me directly via phone, email, or by submitting this message form.
+            I am currently open to prospective full-time corporate opportunities, technical roles in Electronics,
+            Telecommunications, Data Analytics, and IT systems operations. Feel free to contact me directly via phone,
+            email, or by submitting this message form.
           </p>
 
           <div class="contact-cards">
             <!-- Email -->
             <div class="contact-card copy-btn" data-copy="motasim.official@gmail.com" title="Click to copy email">
               <div class="contact-card-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 4-10 8L2 4"></path></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                  <path d="m22 4-10 8L2 4"></path>
+                </svg>
               </div>
               <div class="contact-card-details">
                 <span class="card-label">Primary Email</span>
@@ -753,7 +855,11 @@
             <!-- Phone -->
             <div class="contact-card copy-btn" data-copy="+8801517998512" title="Click to copy phone">
               <div class="contact-card-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
               </div>
               <div class="contact-card-details">
                 <span class="card-label">Phone & WhatsApp</span>
@@ -765,7 +871,10 @@
             <!-- Location -->
             <div class="contact-card">
               <div class="contact-card-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
               </div>
               <div class="contact-card-details">
                 <span class="card-label">Mailing Address</span>
@@ -799,7 +908,10 @@
           </div>
           <button type="submit" class="btn btn-primary btn-full">
             <span>Send Direct Message</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
           </button>
         </form>
       </div>
@@ -811,7 +923,8 @@
     <div class="container">
       <div class="signature-card anim-reveal-up">
         <p class="declaration-text">
-          I hereby declare that all information presented in this Curriculum Vitae is true, authentic, and complete to the best of my knowledge and belief.
+          I hereby declare that all information presented in this Curriculum Vitae is true, authentic, and complete to
+          the best of my knowledge and belief.
         </p>
         <div class="signature-block">
           <div class="signature-line"></div>
@@ -846,4 +959,5 @@
   <!-- Main JavaScript File -->
   <script src="script.js"></script>
 </body>
+
 </html>
