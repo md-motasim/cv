@@ -3116,3 +3116,113 @@ body.light-mode .moon-icon {
     text-align: left;
   }
 }
+
+/* Smallest Smartphones (350px and below) */
+@media (max-width: 350px) {
+  html {
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+    max-width: 100vw;
+    position: relative;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    padding: 0.65rem 1rem;
+    z-index: 9999;
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+
+  .nav-actions {
+    gap: 0.5rem;
+  }
+
+  .theme-toggle {
+    width: 36px;
+    height: 36px;
+  }
+
+  .hero {
+    padding: 5.5rem 1rem 3rem;
+  }
+
+  .hero-photo-container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .section {
+    padding: 4rem 1rem;
+  }
+
+  .section-heading {
+    font-size: clamp(1.3rem, 5vw, 1.7rem);
+    margin-bottom: 2rem;
+  }
+
+  .metric-card {
+    padding: 1.1rem 1rem;
+  }
+
+  .metric-icon {
+    font-size: 1.75rem;
+  }
+
+  .job-card,
+  .edu-card,
+  .workshop-card,
+  .reference-card,
+  .skill-card {
+    padding: 1.5rem 1.15rem;
+  }
+
+  .contact-pill {
+    padding: 0.65rem 1rem;
+    font-size: 0.82rem;
+  }
+
+  .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  /* Contact Section - Center Alignment */
+
+  .contact-lead {
+    text-align: left;
+    padding: 0 1rem;
+  }
+
+  .contact-lead_sub{
+    text-align: justify;
+    padding: 0 2rem 0 2rem;
+  }
+
+  .contact-text {
+    text-align: left;
+  }
+
+  .contact-cards {
+    align-items: left;
+  }
+
+  .contact-card {
+    justify-content: center;
+    padding: 0.45rem 0.25rem;
+  }
+
+  .contact-form {
+    padding: 0px 20px 0px 20px;
+    align-items: left;
+  }
+
+  .form-title {
+    text-align: left;
+  }
+}
