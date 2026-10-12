@@ -105,13 +105,34 @@
     navToggle.addEventListener('click', () => {
       navToggle.classList.toggle('active');
       navLinks.classList.toggle('open');
+      document.body.classList.toggle('nav-open');
     });
 
     navLinks.querySelectorAll('a').forEach((a) => {
       a.addEventListener('click', () => {
         navToggle.classList.remove('active');
         navLinks.classList.remove('open');
+        document.body.classList.remove('nav-open');
       });
+    });
+  }
+
+  // ─── Theme Toggle (Light/Dark Mode) ─────────────
+  const themeToggle = document.getElementById('themeToggle');
+  const savedTheme = localStorage.getItem('theme');
+
+  // Apply saved theme or default to dark mode
+  if (savedTheme === 'light') {
+    document.body.classList.add('light-mode');
+  }
+
+  // Toggle theme on button click
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+      const isLight = document.body.classList.contains('light-mode');
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+      showToast(isLight ? 'Light mode enabled' : 'Dark mode enabled');
     });
   }
 

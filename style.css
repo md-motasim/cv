@@ -7,6 +7,7 @@
    0. Custom Properties & Reset
    ═══════════════════════════════════════════════ */
 :root {
+  /* Dark Mode (Default) */
   --bg:        #0a0a0f;
   --bg-alt:    #111118;
   --surface:   #1a1a24;
@@ -25,6 +26,26 @@
   --transition: .35s cubic-bezier(.25, .46, .45, .94);
   --font-body: 'Inter', system-ui, sans-serif;
   --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+
+  /* Background colors for light mode */
+  --bg-light:        #f8fafc;
+  --bg-alt-light:    #f1f5f9;
+  --surface-light:   #ffffff;
+  --border-light:    #e2e8f0;
+  --text-light:      #1e293b;
+  --text-dim-light:  #64748b;
+  --accent-glow-light: rgba(108, 99, 255, .25);
+}
+
+/* Light Mode */
+body.light-mode {
+  --bg:        var(--bg-light);
+  --bg-alt:    var(--bg-alt-light);
+  --surface:   var(--surface-light);
+  --border:    var(--border-light);
+  --text:      var(--text-light);
+  --text-dim:  var(--text-dim-light);
+  --accent-glow: var(--accent-glow-light);
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -82,20 +103,27 @@ input, textarea { font: inherit; color: inherit; }
    ═══════════════════════════════════════════════ */
 .navbar {
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
   transition: background var(--transition), box-shadow var(--transition), padding var(--transition);
+  backdrop-filter: blur(20px) saturate(1.4);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
+  background: rgba(10, 10, 15, .95);
+  box-shadow: 0 1px 0 var(--border);
+}
+
+body.light-mode .navbar {
+  background: rgba(248, 250, 252, .95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .08);
 }
 
 .navbar.scrolled {
-  background: rgba(10, 10, 15, .85);
-  backdrop-filter: blur(20px) saturate(1.4);
-  -webkit-backdrop-filter: blur(20px) saturate(1.4);
-  box-shadow: 0 1px 0 var(--border);
   padding: .75rem 2rem;
 }
 
@@ -137,6 +165,64 @@ input, textarea { font: inherit; color: inherit; }
   padding: 0.5rem 1rem;
   font-size: 0.85rem;
   border-radius: 8px;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 38px;
+  height: 38px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  cursor: pointer;
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  background: rgba(108, 99, 255, .08);
+  transform: scale(1.05);
+}
+
+.theme-toggle:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.theme-toggle svg {
+  flex-shrink: 0;
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.sun-icon, .moon-icon {
+  position: absolute;
+}
+
+.sun-icon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.moon-icon {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.5);
+}
+
+body.light-mode .sun-icon {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.5);
+}
+
+body.light-mode .moon-icon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
 }
 
 .accent { color: var(--accent); }
@@ -2466,19 +2552,34 @@ input, textarea { font: inherit; color: inherit; }
 /* ═══════════════════════════════════════════════
    13. Responsive
    ═══════════════════════════════════════════════ */
-@media (max-width: 992px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+@media (max-width: 768px) {
+  .btn-sm {
+    display: none !important;
   }
 
-  .metrics-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0.7rem 1.25rem;
+    background: rgba(10, 10, 15, .98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 1px 0 var(--border);
+    z-index: 9999 !important;
   }
 
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .navbar.scrolled {
+    padding: 0.65rem 1.25rem;
+    background: rgba(10, 10, 15, .98);
   }
+
+  .nav-actions {
+    display: flex !important;
+    gap: 0.5rem;
+    order: -1;
+  }k
 
   .job-header {
     flex-direction: column;
@@ -2491,27 +2592,16 @@ input, textarea { font: inherit; color: inherit; }
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 0.85rem 1.25rem;
-    background: rgba(10, 10, 15, .95);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    box-shadow: 0 1px 0 var(--border);
-    z-index: 1000;
-  }
-
-  .navbar.scrolled {
-    padding: 0.7rem 1.25rem;
-    background: rgba(10, 10, 15, .98);
+    padding: 0.85rem 1.5rem;
+    z-index: 9999 !important;
   }
 
   .nav-actions {
-    display: none;
+    display: flex !important;
+    gap: 0.5rem;
+    order: -1;
   }
 
   .nav-links {
@@ -2521,13 +2611,79 @@ input, textarea { font: inherit; color: inherit; }
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(10, 10, 15, .98);
+    background: rgba(0, 0, 0, .98);
     backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(25px);
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
+    padding: 2rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition);
+    z-index: 9999 !important;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transform: translateX(-100%);
+  }
+
+  body.light-mode .nav-links {
+    background: rgba(255, 255, 255, .98);
+  }
+
+  .nav-links.open {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateX(0);
+  }
+
+  .nav-links a {
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 0.5rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0.7rem 1.25rem;
+    background: rgba(10, 10, 15, .98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 1px 0 var(--border);
+    z-index: 9999 !important;
+  }
+
+  .navbar.scrolled {
+    padding: 0.65rem 1.25rem;
+    background: rgba(10, 10, 15, .98);
+  }
+
+  .nav-actions {
+    display: flex !important;
+    gap: 0.5rem;
+    order: -1;
+  }
+
+  .nav-links {
+    position: fixed;
+    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .98);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
     padding: 2rem;
     opacity: 0;
     pointer-events: none;
@@ -2535,21 +2691,27 @@ input, textarea { font: inherit; color: inherit; }
     z-index: 998;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    transform: translateX(100%);
+  }
+
+  body.light-mode .nav-links {
+    background: rgba(255, 255, 255, .98);
   }
 
   .nav-links.open {
     opacity: 1;
     pointer-events: all;
+    transform: translateX(0);
   }
 
   .nav-links a {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 600;
     padding: 0.5rem 0;
   }
 
   .nav-toggle {
-    display: flex;
+    display: block !important;
     z-index: 1001;
     position: relative;
   }
@@ -2753,7 +2915,7 @@ input, textarea { font: inherit; color: inherit; }
   }
 
   .metrics-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 2fr;
     gap: 1rem;
   }
 
