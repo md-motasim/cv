@@ -194,6 +194,12 @@ body.light-mode .navbar {
   gap: 0.75rem;
   align-items: center;
   z-index: 10001;
+  transition: opacity 0.3s ease, pointer-events 0.3s ease;
+}
+
+.nav-actions.menu-open > *:not(.nav-toggle) {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .btn-sm {

@@ -100,8 +100,9 @@
   // ─── Mobile nav toggle ───────────────────────
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.querySelector('.nav-links');
+  const navActions = document.querySelector('.nav-actions');
 
-  if (navToggle && navLinks) {
+  if (navToggle && navLinks && navActions) {
     let scrollPosition = 0;
     let shouldRestoreScroll = true;
 
@@ -109,12 +110,14 @@
       scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
       navToggle.classList.add('active');
       navLinks.classList.add('open');
+      navActions.classList.add('menu-open');
       document.body.style.overflow = 'hidden';
     };
 
     const closeMenu = (restoreScroll = true) => {
       navToggle.classList.remove('active');
       navLinks.classList.remove('open');
+      navActions.classList.remove('menu-open');
       document.body.style.overflow = '';
 
       if (restoreScroll) {
