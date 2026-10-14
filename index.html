@@ -202,7 +202,7 @@
           </div>
         </div>
 
-        <div class="metric-card anim-reveal-up" data-delay="1">
+        <div class="metric-card anim-reveal-up" data-delay="0">
           <div class="metric-icon">🎓</div>
           <div class="metric-content">
             <span class="metric-title">B.Sc. Engineering</span>
@@ -210,7 +210,7 @@
           </div>
         </div>
 
-        <div class="metric-card anim-reveal-up" data-delay="2">
+        <div class="metric-card anim-reveal-up" data-delay="0">
           <div class="metric-icon">📚</div>
           <div class="metric-content">
             <span class="metric-title">HSC (Science)</span>
@@ -218,7 +218,7 @@
           </div>
         </div>
 
-        <div class="metric-card anim-reveal-up" data-delay="3">
+        <div class="metric-card anim-reveal-up" data-delay="0">
           <div class="metric-icon">🏫</div>
           <div class="metric-content">
             <span class="metric-title">SSC (Science)</span>
@@ -513,12 +513,25 @@
 
       <!-- Skill Category Filter Tabs -->
       <div class="skills-filter-nav anim-reveal">
-        <button class="filter-btn active" data-category="all">All Disciplines</button>
-        <button class="filter-btn" data-category="office">Office &amp; Data</button>
-        <button class="filter-btn" data-category="electronics">Electronics &amp; Hardware</button>
-        <button class="filter-btn" data-category="networking">Networking &amp; IT</button>
-        <button class="filter-btn" data-category="software">Programming &amp; Web</button>
-        <button class="filter-btn" data-category="design">Creative &amp; Design</button>
+        <!-- Horizontal buttons (for larger screens) -->
+        <div class="filter-buttons-horizontal">
+          <button class="filter-btn active" data-category="all">All Disciplines</button>
+          <button class="filter-btn" data-category="office">Office &amp; Data</button>
+          <button class="filter-btn" data-category="electronics">Electronics &amp; Hardware</button>
+          <button class="filter-btn" data-category="networking">Networking &amp; IT</button>
+          <button class="filter-btn" data-category="software">Programming &amp; Web</button>
+          <button class="filter-btn" data-category="design">Creative &amp; Design</button>
+        </div>
+
+        <!-- Dropdown (for small screens) -->
+        <select class="filter-dropdown" aria-label="Filter skills by category">
+          <option value="all" selected>All Disciplines</option>
+          <option value="office">Office &amp; Data</option>
+          <option value="electronics">Electronics &amp; Hardware</option>
+          <option value="networking">Networking &amp; IT</option>
+          <option value="software">Programming &amp; Web</option>
+          <option value="design">Creative &amp; Design</option>
+        </select>
       </div>
 
       <div class="skills-grid" id="skillsGrid">

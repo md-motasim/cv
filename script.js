@@ -233,29 +233,52 @@
 
   skillBars.forEach((b) => barObs.observe(b));
 
-  // ─── Skills Filter (Category Tabs) ───────────
+  // ─── Skills Filter (Category Tabs & Dropdown) ───────────
   const filterBtns = document.querySelectorAll('.filter-btn');
+  const filterDropdown = document.querySelector('.filter-dropdown');
   const skillCards = document.querySelectorAll('.skill-card[data-category]');
 
+  const filterSkills = (category) => {
+    // Update active button state (for horizontal buttons)
+    filterBtns.forEach((btn) => {
+      if (btn.dataset.category === category) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+
+    // Update dropdown selected value
+    if (filterDropdown) {
+      filterDropdown.value = category;
+    }
+
+    // Filter skill cards
+    skillCards.forEach((card) => {
+      if (category === 'all' || card.dataset.category === category) {
+        card.style.display = '';
+        setTimeout(() => card.classList.add('visible'), 10);
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  };
+
+  // Event listeners for horizontal buttons
   filterBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
       const category = btn.dataset.category;
-
-      // Update active button
-      filterBtns.forEach((b) => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      // Filter skill cards
-      skillCards.forEach((card) => {
-        if (category === 'all' || card.dataset.category === category) {
-          card.style.display = '';
-          setTimeout(() => card.classList.add('visible'), 10);
-        } else {
-          card.style.display = 'none';
-        }
-      });
+      filterSkills(category);
     });
   });
+
+  // Event listener for dropdown
+  if (filterDropdown) {
+    filterDropdown.addEventListener('change', (e) => {
+      const category = e.target.value;
+      filterSkills(category);
+    });
+  }
 
   // ─── Parallax on hero shapes ─────────────────
   const shapes = document.querySelectorAll('.shape');
