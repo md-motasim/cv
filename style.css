@@ -3105,9 +3105,6 @@ body.light-mode .moon-icon {
     gap: 0.5rem;
     flex-wrap: wrap;
   }
-  .filter-dropdown {
-    display: none;
-  }
 }
 
 /* Small Smartphones (480px and below) */
