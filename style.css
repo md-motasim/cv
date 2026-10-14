@@ -280,7 +280,7 @@ body.light-mode .moon-icon {
 }
 
 .nav-links a {
-  font-size: .875rem;
+  font-size: 1.25rem;
   font-weight: 500;
   color: var(--text-dim);
   position: relative;
