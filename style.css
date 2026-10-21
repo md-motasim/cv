@@ -2694,30 +2694,10 @@ body.light-mode .moon-icon {
 @media (max-width: 992px) {
   html {
     scroll-padding-top: 70px;
-    overflow-x: hidden;
-  }
-
-  body {
-    overflow-x: hidden;
-    max-width: 100vw;
-    position: relative;
   }
 
   .navbar {
-    position: fixed;
-    top: 0;
     padding: 0.85rem 1.5rem;
-    z-index: 9999 !important;
-    width: 100%;
-    left: 0;
-    right: 0;
-  }
-
-  .nav-actions {
-    display: flex;
-    gap: 0.75rem;
-    align-items: center;
-    z-index: 10001;
   }
 
   .nav-toggle {
@@ -2879,13 +2859,6 @@ body.light-mode .moon-icon {
 @media (max-width: 768px) {
   html {
     scroll-padding-top: 65px;
-    overflow-x: hidden;
-  }
-
-  body {
-    overflow-x: hidden;
-    max-width: 100vw;
-    position: relative;
   }
 
   .btn-sm {
@@ -2893,13 +2866,7 @@ body.light-mode .moon-icon {
   }
 
   .navbar {
-    position: fixed;
-    top: 0;
     padding: 0.75rem 1.25rem;
-    z-index: 9999;
-    width: 100%;
-    left: 0;
-    right: 0;
   }
 
   .nav-logo {
@@ -3025,108 +2992,8 @@ body.light-mode .moon-icon {
 
 /* Small Smartphones (480px and below) */
 @media (max-width: 480px) {
-  html {
-    overflow-x: hidden;
-  }
-
-  body {
-    overflow-x: hidden;
-    max-width: 100vw;
-    position: relative;
-  }
-
   .navbar {
-    position: fixed;
-    top: 0;
     padding: 0.65rem 1rem;
-    z-index: 9999;
-    width: 100%;
-    left: 0;
-    right: 0;
-  }
-
-  .nav-actions {
-    gap: 0.5rem;
-  }
-
-  .theme-toggle {
-    width: 36px;
-    height: 36px;
-  }
-
-  .hero {
-    padding: 5.5rem 1rem 3rem;
-  }
-
-  .hero-photo-container {
-    width: 150px;
-    height: 150px;
-  }
-
-  .section {
-    padding: 4rem 1rem;
-  }
-
-  .section-heading {
-    font-size: clamp(1.3rem, 5vw, 1.7rem);
-    margin-bottom: 2rem;
-  }
-
-  .metric-card {
-    padding: 1.1rem 1rem;
-  }
-
-  .metric-icon {
-    font-size: 1.75rem;
-  }
-
-  .job-card,
-  .edu-card,
-  .workshop-card,
-  .reference-card,
-  .skill-card {
-    padding: 1.5rem 1.15rem;
-  }
-
-  .contact-pill {
-    padding: 0.65rem 1rem;
-    font-size: 0.82rem;
-  }
-
-  .btn {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.9rem;
-  }
-
-  /* Skills Filter - Default state for larger screens */
-.skills-filter-nav {
-  .filter-buttons-horizontal {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-  }
-}
-
-/* Small Smartphones (480px and below) */
-@media (max-width: 480px) {
-  html {
-    overflow-x: hidden;
-  }
-
-  body {
-    overflow-x: hidden;
-    max-width: 100vw;
-    position: relative;
-  }
-
-  .navbar {
-    position: fixed;
-    top: 0;
-    padding: 0.65rem 1rem;
-    z-index: 9999;
-    width: 100%;
-    left: 0;
-    right: 0;
   }
 
   .nav-actions {
@@ -3183,52 +3050,48 @@ body.light-mode .moon-icon {
   }
 
   /* Skills Filter - Show dropdown, hide horizontal buttons */
-  .skills-filter-nav {
-    .filter-buttons-horizontal {
-      display: none;
-    }
-    .filter-dropdown {
-      display: block;
-      width: 100%;
-      padding: 0.85rem 2rem;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 50px;
-      color: var(--text);
-      font-weight: 600;
-      font-size: 0.95rem;
-      appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236c63ff' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 1rem center;
-      background-size: 12px 8px;
-      cursor: pointer;
-      transition: all var(--transition);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .filter-dropdown:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 35px var(--accent-glow);
-    }
-
-    .filter-dropdown:focus {
-      outline: 2px solid var(--accent);
-      outline-offset: 2px;
-    }
+  .skills-filter-nav .filter-buttons-horizontal {
+    display: none;
   }
 
-  /* Contact Section - Center Alignment */
+  .skills-filter-nav .filter-dropdown {
+    display: block;
+    width: 100%;
+    padding: 0.85rem 2rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    color: var(--text);
+    font-weight: 600;
+    font-size: 0.95rem;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236c63ff' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 12px 8px;
+    cursor: pointer;
+    transition: all var(--transition);
+  }
 
+  .skills-filter-nav .filter-dropdown:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 35px var(--accent-glow);
+  }
+
+  .skills-filter-nav .filter-dropdown:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  /* Contact Section */
   .contact-lead {
     text-align: left;
     padding: 0 1rem;
   }
 
-  .contact-lead_sub{
+  .contact-lead_sub {
     text-align: left;
     padding: 0 1rem;
   }
@@ -3238,52 +3101,17 @@ body.light-mode .moon-icon {
   }
 
   .contact-cards {
-    align-items: left;
+    align-items: flex-start;
   }
 
   .contact-card {
     justify-content: center;
-    padding: 0.75rem 0.75rem;
+    padding: 0.75rem;
   }
 
   .contact-form {
-    padding: 0px 20px 0px 20px;
-    align-items: left;
-  }
-
-  .form-title {
-    text-align: left;
-  }
-}
-
-  /* Contact Section - Center Alignment */
-
-  .contact-lead {
-    text-align: left;
-    padding: 0 1rem;
-  }
-
-  .contact-lead_sub{
-    text-align: left;
-    padding: 0 1rem;
-  }
-
-  .contact-text {
-    text-align: left;
-  }
-
-  .contact-cards {
-    align-items: left;
-  }
-
-  .contact-card {
-    justify-content: center;
-    padding: 0.75rem 0.75rem;
-  }
-
-  .contact-form {
-    padding: 0px 20px 0px 20px;
-    align-items: left;
+    padding: 0 20px;
+    align-items: flex-start;
   }
 
   .form-title {
@@ -3293,110 +3121,12 @@ body.light-mode .moon-icon {
 
 /* Smallest Smartphones (350px and below) */
 @media (max-width: 350px) {
-  html {
-    overflow-x: hidden;
-  }
-
-  body {
-    overflow-x: hidden;
-    max-width: 100vw;
-    position: relative;
-  }
-
-  .navbar {
-    position: fixed;
-    top: 0;
-    padding: 0.65rem 1rem;
-    z-index: 9999;
-    width: 100%;
-    left: 0;
-    right: 0;
-  }
-
-  .nav-actions {
-    gap: 0.5rem;
-  }
-
-  .theme-toggle {
-    width: 36px;
-    height: 36px;
-  }
-
-  .hero {
-    padding: 5.5rem 1rem 3rem;
-  }
-
-  .hero-photo-container {
-    width: 150px;
-    height: 150px;
-  }
-
-  .section {
-    padding: 4rem 1rem;
-  }
-
-  .section-heading {
-    font-size: clamp(1.3rem, 5vw, 1.7rem);
-    margin-bottom: 2rem;
-  }
-
-  .metric-card {
-    padding: 1.1rem 1rem;
-  }
-
-  .metric-icon {
-    font-size: 1.75rem;
-  }
-
-  .job-card,
-  .edu-card,
-  .workshop-card,
-  .reference-card,
-  .skill-card {
-    padding: 1.5rem 1.15rem;
-  }
-
-  .contact-pill {
-    padding: 0.65rem 1rem;
-    font-size: 0.82rem;
-  }
-
-  .btn {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.9rem;
-  }
-
-  /* Contact Section - Center Alignment */
-
-  .contact-lead {
-    text-align: left;
-    padding: 0 1rem;
-  }
-
-  .contact-lead_sub{
+  .contact-lead_sub {
     text-align: justify;
-    padding: 0 2rem 0 2rem;
-  }
-
-  .contact-text {
-    text-align: left;
-  }
-
-  .contact-cards {
-    align-items: left;
+    padding: 0 2rem;
   }
 
   .contact-card {
-    justify-content: center;
     padding: 0.45rem 0.25rem;
-  }
-
-  .contact-form {
-    padding: 0px 20px 0px 20px;
-    align-items: left;
-  }
-
-  .form-title {
-    text-align: left;
   }
 }

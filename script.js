@@ -319,22 +319,51 @@
   // ─── Contact form submission handler ─────────
   const form = document.getElementById('contactForm');
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = form.querySelector('button[type="submit"]');
       const origHTML = btn.innerHTML;
 
-      btn.innerHTML = '<span>✓ Message Sent Successfully!</span>';
-      btn.style.background = '#00d4aa';
+      btn.innerHTML = '<span>Sending Message...</span>';
       btn.disabled = true;
 
-      setTimeout(() => {
-        btn.innerHTML = origHTML;
-        btn.style.background = '';
-        btn.disabled = false;
-        form.reset();
-        showToast('Thank you for reaching out!');
-      }, 3200);
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+
+      try {
+        const response = await fetch('https://formsubmit.co/ajax/motasim.official@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(data)
+        });
+
+        if (response.ok) {
+          btn.innerHTML = '<span>✓ Message Sent Successfully!</span>';
+          btn.style.background = '#00d4aa';
+
+          setTimeout(() => {
+            btn.innerHTML = origHTML;
+            btn.style.background = '';
+            btn.disabled = false;
+            form.reset();
+            showToast('Thank you for reaching out!');
+          }, 3200);
+        } else {
+          throw new Error('Failed to send message');
+        }
+      } catch (error) {
+        btn.innerHTML = '<span>Error - Try Again</span>';
+        btn.style.background = '#ff5c5c';
+        setTimeout(() => {
+          btn.innerHTML = origHTML;
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 3000);
+        showToast('Failed to send message. Please email directly at motasim.official@gmail.com');
+      }
     });
   }
 
