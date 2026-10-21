@@ -3101,17 +3101,29 @@ body.light-mode .moon-icon {
   }
 
   .contact-cards {
-    align-items: flex-start;
+    align-items: stretch;
+    width: 100%;
   }
 
   .contact-card {
-    justify-content: center;
+    justify-content: flex-start;
     padding: 0.75rem;
+    width: 100%;
   }
 
   .contact-form {
-    padding: 0 20px;
-    align-items: flex-start;
+    padding: 0.75rem;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
   }
 
   .form-title {
