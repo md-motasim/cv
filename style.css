@@ -3132,7 +3132,7 @@ body.light-mode .moon-icon {
   }
 }
 
-/* Smallest Smartphones (350px and below) */
+/* Smallest Smartphones (372px and below) */
 @media (max-width: 372px) {
   .contact-lead {
     text-align: center;
@@ -3141,8 +3141,9 @@ body.light-mode .moon-icon {
 
   .contact-lead_sub {
     text-align: justify;
-    word-spacing: -2px;
-    text-justify: distribute;
+    text-align-last: center;
+    word-break: keep-all;
+    hyphens: contain;
     padding: 0 1rem;
   }
 
