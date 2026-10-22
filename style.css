@@ -3093,7 +3093,10 @@ body.light-mode .moon-icon {
   }
 
   .contact-lead_sub {
-    text-align: left;
+    text-align: justify;
+    text-align-last: center;
+    word-break: keep-all;
+    hyphens: contain;
     padding: 0 1.5rem;
   }
 
