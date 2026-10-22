@@ -3141,6 +3141,7 @@ body.light-mode .moon-icon {
 
   .contact-lead_sub {
     text-align: justify;
+    word-spacing: -2px;
     text-justify: inter-word;
     padding: 0 1rem;
   }
