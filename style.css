@@ -3140,13 +3140,17 @@ body.light-mode .moon-icon {
   }
 
   .contact-lead_sub {
-    text-align: left;
-    padding: 0 2rem;
+    text-align: justify;
+    padding: 0 1rem;
   }
 
   .contact-card {
     align-items: center;
-    max-width: 94%;
-    padding: 0.45rem;
+    max-width: 92%;
+    padding: 0.6rem;
+  }
+
+  .form-group {
+    width: 92%;
   }
 }
